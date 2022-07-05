@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<html>
+
+<head>
+    <title>Balance Sheet</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="start">From date:</label>
+    <input type="date" id="startDate" name="trip-start" value="2020-08-11" min="2008-01-01" max="2025-12-31">
+
+    <label for="start">To date:</label>
+    <input type="date" id="endDate" name="trip-start" value="2020-08-11" min="2008-01-01" max="2025-12-31">
+    <br><br>
+    <!-- <input type="button" onclick="search()" class="" Value="Search" id=""> -->
+
+
+    <div>
+        <h1>Balance Sheet</h1>
+        <table id="empTable" border="0" cellspacing="5" cellpadding="5">
+            <tr>
+                <th id="id">Receipts</th>
+                <th id="emp">Payments</th>
+                <th id="date">Date</th>
+            </tr>
+            <tr>
+                <td>1000</td>
+                <td>2000</td>
+                <td>2022-02-01</td>
+            </tr>
+            <tr>
+                <td>1500</td>
+                <td>3000</td>
+                <td>2018-10-02</td>
+            </tr>
+            <tr>
+                <td>3000</td>
+                <td>2500</td>
+                <td>2010-05-05</td>
+            </tr>
+            <tr>
+                <td>4000</td>
+                <td>1000</td>
+                <td>2021-02-01</td>
+            </tr>
+            <tr>
+                <td>5000</td>
+                <td>3500</td>
+                <td>2018-02-02</td>
+            </tr>
+            <tr>
+                <td>2500</td>
+                <td>6000</td>
+                <td>2010-06-15</td>
+            </tr>
+        </table>
+        <input type="button" id="bt" value="Show Data" onclick="showTableData()" />
+    </div>
+    <p id="info"></p>
+
+    <script src="./balancsSheet.js"></script>
+</body>
+
+</html>

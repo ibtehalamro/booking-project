@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Costumer Report</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="start">From date:</label>
+    <input type="date" id="startDate" name="trip-start" value="2020-08-11" min="2008-01-01" max="2025-12-31">
+
+    <label for="start">To date:</label>
+    <input type="date" id="endDate" name="trip-start" value="2020-08-11" min="2008-01-01" max="2025-12-31">
+
+    <div>
+        <h1>Costumer Report</h1>
+    </div>
+    <table id="empTable" border="0" cellspacing="5" cellpadding="5">
+        <tr>
+            <th id="id">ID</th>
+            <th id="emp">Employee Name</th>
+            <th id="date">Date</th>
+        </tr>
+        <tr>
+            <td>01</td>
+            <td>Alpha</td>
+            <td>2022-02-01</td>
+        </tr>
+        <tr>
+            <td>02</td>
+            <td>Bravo</td>
+            <td>2018-10-02</td>
+        </tr>
+        <tr>
+            <td>03</td>
+            <td>Charlie</td>
+            <td>2010-05-05</td>
+        </tr>
+        <tr>
+            <td>04</td>
+            <td>Alpha</td>
+            <td>2021-02-01</td>
+        </tr>
+        <tr>
+            <td>05</td>
+            <td>Bravo</td>
+            <td>2018-02-02</td>
+        </tr>
+        <tr>
+            <td>06</td>
+            <td>Charlie</td>
+            <td>2010-06-15</td>
+        </tr>
+    </table>
+
+
+    <input type="button" id="bt" value="Show Data" onclick="showTableData()" />
+    <p id="info"></p>
+
+    <script src="costumerReport.js"></script>
+</body>
+
+
+
+
+</html>
