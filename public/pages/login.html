@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form class="login-form">
+            <label>Email</label>
+            <input type="text" placeholder="Email" id="username" required>
+            <label>Password</label>
+            <input type="password" placeholder="Password" id="password" required>
+            <input type="button" onclick="sendLoginRequest()" class="submit-button" Value="Login" id="submit">
+        </form>
+
+        <script>
+
+            const sendLoginRequest = () => {
+                console.log("sendLoginRequest called");
+                var xhttp = new XMLHttpRequest();
+                xhttp.open("POST", "http://127.0.0.1:8081/hello", true);
+                xhttp.setRequestHeader('Content-type', 'application/json');
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        // Response
+                        var response = this.responseText;
+                        // location.href = "https://www.javascripttutorial.net/";
+                        console.log("response is ready" + response);
+
+                    }
+                };
+                xhttp.send(JSON.stringify({ email: "ff", password: "ss" }));
+            }
+        </script>
+</body>
+
+</html>
