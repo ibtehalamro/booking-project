@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="Countianer-box">
+        <h1> Employees</h1>
+        <!-- <form class="customer-form"> -->
+            <div class="container-form" >
+            <input type="text" placeholder="Employee ID" id="ID" name="id">
+            <input type="text" placeholder="Emloyee Name" id="EmployeeName" name="EmployeeName" required>
+            <input type="button" id="done" onclick="submitForm()" class="submit-button" Value="Add Employee">
+        </div>
+        
+            <table>
+                    <tr>
+                        <th>
+                            EmployeeID
+                        </th>
+                        <th>
+                            EmployeeName
+                        </th>
+                        <th>
+                            delete
+                        </th>
+                    </tr>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+        <!-- </form> -->
+        <script src="/js/Emolyee.js"></script>
+        </div>
+</body>
+</html>
