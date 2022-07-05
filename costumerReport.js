@@ -16,7 +16,6 @@ function showTableData() {
                 
                 }
 
-                // info.innerHTML = info.innerHTML + ' ' +  myTab.rows.innerHTML;
             }
         }
 

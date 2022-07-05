@@ -22,7 +22,6 @@ function showTableData() {
                     // +( parseInt(myTab.rows[i].cells[k]) - parseInt(myTab.rows[i].cells[k]) ) ;
                 }
 
-                // info.innerHTML = info.innerHTML + ' ' +  myTab.rows.innerHTML;
             }
         }
 
@@ -30,5 +29,3 @@ function showTableData() {
 
     }
 }
-
-//sumVal = sumVal + parseInt(table.rows[i].cells[1].innerHTML);
