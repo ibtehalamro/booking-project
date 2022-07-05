@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url('images/background1.jpg');
+    background-color: hsl(254, 64%, 37%);
+    font-family: sans-serif;
+}
+.rejisterCountianer-box{
+    margin: auto;
+    margin-top: 25px;
+    opacity:0.8 ;
+    width: 370px;
+    height: 520px;
+    background-color: aliceblue;
+    box-shadow: 10px 10px 5px lightblue;
+}
+.loginCountianer-box{
+    margin: auto;
+    margin-top: 25px;
+    width: 370px;
+    height: 520px;
+    background-color: aliceblue;
+    box-shadow: 10px 10px 5px lightblue;
+    overflow: hidden;
+    opacity:0.8 ;
+}
+h1{
+    color: hsl(254, 91%, 17%);
+    text-align: center;
+    padding-top: 25px;
+}
+.rejester-form{
+    width: 300px;
+    margin-left: 20px;
+}
+.login-form{
+    width: 300px;
+    margin-left: 20px;
+}
+form label {
+    color: hsl(254, 91%, 17%);
+    display: flex;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+form input {
+    width: 100%;
+    padding: 10px;
+    border:1px solid hsl(254, 91%, 17%);
+    border-radius: 3px;
+}
+select{
+    width: 100%;
+    padding: 10px;
+    border:1px solid hsl(254, 91%, 17%);
+    border-radius: 3px;
+}
+
+.submit-button{
+    height: 35px;
+    width: 320px;
+    margin-top: 30px;
+    background-color: hsla(229, 94%, 59%, 0.937);
+    color: white;
+    font-size: 17px;
+    transition: 0.4s;
+}
+p{
+    padding-top: 15px;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.submit-button:hover{
+    background-color:rgb(126, 171, 255);
+    color: hsl(232, 66%, 54%);
+    border:1px solid hsl(254, 91%, 17%);
+
+}
+
+
+
+
