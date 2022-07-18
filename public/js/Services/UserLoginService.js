@@ -5,8 +5,11 @@ export default class UserLoginService {
     }
     authenticateUser = (user) => {
         const t = this.userRepository.getUserByEmail("ibtehal.email.com");
-        console.log("user from service " + t?.getEmail());
-        return user;
+        t.then((res, rej) => {
+            return res();
+            console.log("user from service " + t?.getEmail());
+            return user;
+        });
     };
 }
 //# sourceMappingURL=UserLoginService.js.map

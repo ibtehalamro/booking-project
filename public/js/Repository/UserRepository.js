@@ -1,18 +1,14 @@
+import User from "../Models/User.js";
 export class UserRepository {
+    users = new Map([
+        [1, new User("ibtehal.email.com", "1234", "ibtehal")],
+        [1, new User("rahaf.email.com", "1234", "rahaf")],
+        [1, new User("tala.email.com", "1234", "tala")],
+    ]);
     connection;
     constructor(connection) {
         this.connection = connection;
     }
-    getUser = (email) => {
-        return new Promise((resolve, reject) => {
-            this.connection.query(`SELECT * FROM users WHERE email = '${email}'`, (error, elements) => {
-                if (error) {
-                    return reject(error);
-                }
-                return resolve(elements);
-            });
-        });
-    };
     async getUserByEmail(email) {
         let user = null;
         console.log("before query");
