@@ -2,11 +2,13 @@ export default class User {
   private email: string = "";
   private password: string = "";
   private name: string = "";
+  private static userIDCounter: number = 1;
   private  id : number=0;
   constructor(email: string, password: string, name: string="") {
     this.setEmail(email);
     this.setPassword(password);
     this.setName(name);
+    this.id=User.userIDCounter++;
   }
 
   getEmail(): string {

@@ -7,10 +7,10 @@ export default class UserLoginService {
     this.userRepository = userRepository;
   }
 
-  authenticateUser = (user: User): User => {
- const t=   this.userRepository.getUserByEmail("ibtehal.email.com");
-t.then((res,rej) => { return res()
- console.log("user from service "+t?.getEmail())
-    return user;
+  authenticateUser = (user: User): User| null=> {
+    const t = this.userRepository.getUserByEmail(user.getEmail());
+
+    // console.log("user from service " + t?.getEmail());
+    return t;
   };
 }

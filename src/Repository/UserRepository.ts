@@ -1,25 +1,23 @@
-import { Connection } from "mysql";
 import User from "../Models/User.js";
 
 export class UserRepository {
   private users = new Map<number, User>([
     [1, new User("ibtehal.email.com", "1234", "ibtehal")],
-    [1, new User("rahaf.email.com", "1234", "rahaf")],
-    [1, new User("tala.email.com", "1234", "tala")],
+    [2, new User("rahaf.email.com", "1234", "rahaf")],
+    [3, new User("tala.email.com", "1234", "tala")],
   ]);
 
-  private connection: Connection;
-  constructor(connection: Connection) {
-    this.connection = connection;
+  getUserByEmail(email: string): User | null {
+    const users = this.getUsers();
+    for (const [key, value] of users) {
+      if (value.getEmail() === email) {
+        return value;
+      }
+    }
+    return null;
   }
 
-
-
-  async getUserByEmail(email: string): Promise<User | null> {
-    let user = null;
-    console.log("before query");
-    user = await this.getUser(email);
-    console.log("after query");
-    return user;
-  }
+  getUsers = () => {
+    return this.users;
+  };
 }
