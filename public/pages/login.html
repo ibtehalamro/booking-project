@@ -13,29 +13,46 @@
         <h1>Login</h1>
         <form class="login-form">
             <label>Email</label>
-            <input type="text" placeholder="Email" id="username" required>
+            <input type="text" placeholder="Email" id="email" required>
             <label>Password</label>
             <input type="password" placeholder="Password" id="password" required>
             <input type="button" onclick="sendLoginRequest()" class="submit-button" Value="Login" id="submit">
+            <span class="messages"></span>
         </form>
 
         <script>
 
+            const getRequestJsonObject = () => {
+                const emailInputElement = document.getElementById("email");
+                const passwordInputElement = document.getElementById("password");
+                const requestJsonObject = JSON.stringify({ email: emailInputElement.value, password: passwordInputElement.value });
+                return requestJsonObject;
+            }
             const sendLoginRequest = () => {
                 console.log("sendLoginRequest called");
                 var xhttp = new XMLHttpRequest();
-                xhttp.open("POST", "http://127.0.0.1:8081/hello", true);
+                xhttp.open("POST", "http://127.0.0.1:8081/login", true);
                 xhttp.setRequestHeader('Content-type', 'application/json');
                 xhttp.onreadystatechange = function () {
                     if (this.readyState == 4 && this.status == 200) {
-                        // Response
-                        var response = this.responseText;
-                        // location.href = "https://www.javascripttutorial.net/";
-                        console.log("response is ready" + response);
-
+                        const response = JSON.parse(this.response);
+                        console.log('Response from server', response.msg);
+                        if (response.msg == "ok") {
+                            localStorage.setItem("user",JSON.stringify(response.user));
+                            location.href = `http://localhost:8081/home?user=${JSON.stringify(response.user)}`;
+                        }
+                        else if (response.msg == "error") {
+                            showErrorMessage(response.description);
+                        }
                     }
                 };
-                xhttp.send(JSON.stringify({ email: "ff", password: "ss" }));
+
+                xhttp.send(getRequestJsonObject());
+            }
+
+            const showErrorMessage = (msg) => {
+                const messageSpan = document.querySelector(".messages");
+                messageSpan.innerHTML = msg;
             }
         </script>
 </body>

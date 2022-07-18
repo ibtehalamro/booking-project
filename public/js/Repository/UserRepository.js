@@ -2,19 +2,20 @@ import User from "../Models/User.js";
 export class UserRepository {
     users = new Map([
         [1, new User("ibtehal.email.com", "1234", "ibtehal")],
-        [1, new User("rahaf.email.com", "1234", "rahaf")],
-        [1, new User("tala.email.com", "1234", "tala")],
+        [2, new User("rahaf.email.com", "1234", "rahaf")],
+        [3, new User("tala.email.com", "1234", "tala")],
     ]);
-    connection;
-    constructor(connection) {
-        this.connection = connection;
+    getUserByEmail(email) {
+        const users = this.getUsers();
+        for (const [key, value] of users) {
+            if (value.getEmail() === email) {
+                return value;
+            }
+        }
+        return null;
     }
-    async getUserByEmail(email) {
-        let user = null;
-        console.log("before query");
-        user = await this.getUser(email);
-        console.log("after query");
-        return user;
-    }
+    getUsers = () => {
+        return this.users;
+    };
 }
 //# sourceMappingURL=UserRepository.js.map

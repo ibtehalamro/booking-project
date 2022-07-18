@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+</head>
+<body>
+    create account
+    <form class="login-form">
+        <label>Company Name</label>
+        <input type="text" placeholder="Company Name" id="companyName" required>
+
+        <label>Country Name</label>
+        <input type="text" placeholder="Country Name" id="country" required>
+
+        <label>Currency</label>
+        <input type="text" placeholder="Currency" id="currency" required>
+
+        <input type="button" onclick="sendCreateAccountRequest()" class="submit-button" Value="create" id="submit">
+        <span class="messages"></span>
+    </form>
+  <script type="text/javascript" src="../js/PagesScripts/accountForm.js"></script>
+
+</body>
+</html>
