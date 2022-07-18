@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { request } from "http";
 import Account from "../Models/Account.js";
-import AccountService from "../Services/AccountService";
+import AccountService from "../Services/AccountService.js";
 
 export default class AccountController {
   private accountService: AccountService;

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payments</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="Countianer-box">
+        <h1> New Payment</h1>
+        <!-- <form class="customer-form"> -->
+            <div class="container-form" >
+            <input type="date" id="DATE" name="trip-start" value="2022-01-01" min="2022-01-01" max="1-1-2023" name="date" required>
+            <input type="text" placeholder="Amount" id="Amount" name="amount" required name="amount">
+            <input type="text" placeholder="Employee ID" id="EmployeeID" name="ID" required name="amount" >
+            
+            <input type="submit" id="Add" onclick="submitForm()" class="submit-button" value="Add Payment">
+        </div>
+        <div>
+            <table>
+                    <tr>
+                        <th>
+                            DataOfPayment
+                        </th>
+                        <th>
+                            The Amount
+                        </th>
+                        <th>
+                            Employee ID
+                        </th>
+                    </tr>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+    </div>
+        <script  src="/Reciept.js"></script>
+        </div>
+</body>
+</html>

@@ -1,5 +1,5 @@
 import Account from '../Models/Account.js';
-import AccountRepository from '../Repository/AccountRepository';
+import AccountRepository from '../Repository/AccountRepository.js';
 export default class AccountService{
     private accountRepository:AccountRepository;
 
